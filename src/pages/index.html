@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teacher Biography & Design System Showcase</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"rel="stylesheet"/>
+        <link rel="stylesheet" href="../css/output.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="fixed top-0 z-50 w-full flex justify-between items-center py-4 px-8">
+            <!-- Logo -->
+            <div class="flex h-11 w-11 items-center justify-center rounded-md border border-border-default bg-default p-2">
+                <p class="text-xl text-heading font-serif font-medium">DS</p>
+            </div>
+
+            <!-- Menu -->
+            <div id="menu-btn" class="flex h-11 w-11 items-center justify-center rounded-md border border-border-default bg-default p-2 cursor-pointer hover:bg-gray-100 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        fill="currentColor"
+                        d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"
+                    />
+                </svg>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="group fixed top-0 right-0 z-[60] h-full w-screen max-w-full bg-page transform -translate-y-full transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col">
+            <!-- Sidebar Header -->
+            <div class="px-8 py-4 flex justify-end items-center">
+                <button id="close-sidebar-btn" class="p-2 rounded-md hover:bg-default transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Sidebar Links -->
+            <div class="flex flex-col justify-center items-center p-6 gap-6 flex-grow">
+                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[300ms]">
+                    <a href="#home" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>Home</h2></a>
+                </div>
+                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[375ms]">
+                    <a href="#about" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>About</h2></a>
+                </div>
+                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[450ms]">
+                    <a href="#skills" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>Skills</h2></a>
+                </div>
+                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[525ms]">
+                    <a href="#works" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>Works</h2></a>
+                </div>
+                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[600ms]">
+                    <a href="#more" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>More</h2></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Hero Section -->
+        <section id="home" class="py-20 px-8 flex flex-col">
+
+          <!-- Heading -->
+          <div class="mb-20 flex flex-col">
+            <h1 class="display leading-[90%] text-left">dyven</h1>
+            <h1 class="display leading-[90%] text-right">siauw</h1>
+          </div>
+
+          <!-- Description -->
+           <div class="mb-20 flex flex-col gap-6">
+             <p>Greetings — Dyven Siauw from SBXone. <br>A UI/UX Designer based in Bali, Indonesia.</p>
+             <p>2026 <br>UI/UX Design.</p>
+             <li class="flex flex-col gap-0">
+               <a href="">Linkedin</a>
+               <a href="">Instagram</a>
+               <a href="">Github</a>
+              </li>
+           </div>
+
+          <!-- Content Header -->
+          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
+            <p>Works</p>
+            <p>Januari - Juni</p>
+          </div>
+
+          <!-- Carrousell -->
+           <div class="w-full overflow-x-scroll flex gap-5">
+            <img class="w-40 h-40 flex-none rounded-lg bg-border-default" src="" alt="">
+            <img class="w-40 h-40 flex-none rounded-lg bg-border-default" src="" alt="">
+            <img class="w-40 h-40 flex-none rounded-lg bg-border-default" src="" alt="">
+           </div>
+        </section>
+
+        <!-- About SBX Section -->
+        <section id="about" class="py-20 px-8">
+
+          <!-- Heading -->
+          <h1 class="split-text-animate mb-10 md:mb-40 leading-[110%]">Goes intern at SBXone Studio. Working as a UI/UX designer and front-end developer.</h1>
+
+          <!-- Content Header -->
+          <div class="mb-5 pb-2 flex justify-between border-b border-border-default md:mb-10 ">
+            <p>About</p>
+            <p>SBXone</p>
+          </div>
+
+          <!-- Description -->
+           <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
+              <h3>My Intern Journey.</h3>
+              <div class="flex flex-col gap-5 mb-5 ">
+                <p>Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
+                <p>Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
+                <p>Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
+              </div>
+
+              <img class="w-40 h-40 flex-none rounded-lg bg-border-default place-self-end self-start" src="" alt="">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+          <section id="skills" class="py-20 px-8">
+
+            <!-- Content Header -->
+          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
+            <p>Skills</p>
+            <p>Dyven Siauw</p>
+          </div>
+
+          <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
+
+            <!-- Heading -->
+              <h3>Skills I Have Learned.</h3>
+
+              <p class="mb-5">Since 8 Januari 2026, i have been learning many things as a designer in SBXone.</p>
+              <!-- Skills -->
+              <div class="flex flex-col gap-10 mb-5 ">
+                <!-- Skill -->
+                <div class="flex flex-col gap-2">
+                  <p class="text-heading font-medium ">- User Interface Principles</p>
+                  <p class="pl-5 border-l border-border-default">Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
+                </div>
+                <!-- Skill -->
+                <div class="flex flex-col gap-2">
+                  <p class="text-heading font-medium">- User Experience Principles</p>
+                  <p class="pl-3 border-l border-border-default ">Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
+                </div>
+                <!-- Skill -->
+                <div class="flex flex-col gap-2">
+                  <p class="text-heading font-medium">- Motion Design Principles</p>
+                  <p class="pl-5 border-l border-border-default">Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
+                </div>
+              </div>
+              
+            </div>
+
+          
+          </section>
+
+        <!-- Works Section -->
+         <section id="works" class="py-20 px-8">
+
+          <!-- Content Header -->
+          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
+            <p>Works</p>
+            <p>Januari - Juni</p>
+          </div>
+
+          <!-- Item -->
+           <div class="w-full grid grid-cols-2 gap-5 md:gap-y-20">
+            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-80 xl:h-120" src="" alt="">
+            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-100 xl:h-160" src="" alt="">
+            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-100 xl:h-160" src="" alt="">
+            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-80 xl:h-120" src="" alt="">
+           </div>
+         </section>
+
+         <!-- Motto -->
+         <section id="more" class="py-20 px-8">
+
+          <!-- Content Header -->
+          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
+            <p>More</p>
+            <p>Dyven Siauw</p>
+          </div>
+
+          <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
+
+            <!-- Heading -->
+              <p>My Motto</p>
+              
+              <!-- Quotes -->
+              <div class="flex flex-col gap-5">
+                <h4 class="mb-5">"Sekali dalam hidup setiap orang, setidaknya, keberuntungan mengetuk pintunya."</h4>              
+                <p class="place-self-end self-start">John L. Bates, <br>1936</p>
+              </div>
+            </div>
+
+          
+          </section>
+
+         <!-- Tools -->
+         <section class="py-20 px-8 ">
+
+          <!-- Content Header -->
+          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
+            <p>More</p>
+            <p>Dyven Siauw</p>
+          </div>
+
+          <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
+
+            <!-- Heading -->
+              <p>Tools</p>
+              
+              <!-- Tools -->
+              <div class="grid grid-cols-2 gap-3 md:grid-cols-5 md:col-span-2">
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
+              </div>
+            </div>
+
+          
+          </section>
+
+          <!-- Footer -->
+           <section class="bg-default flex flex-wrap justify-between gap-y-20 gap-x-5 pt-20 pb-20 px-8 border-t-1 border-border-default">
+            <h1 class="display leading-[70%]">DS</h1>
+
+            <!-- Location -->
+            <div class="flex flex-col gap-1">
+              <p class="text-heading font-medium ">Location</p>
+              <p>Denpasar City, Bali <br>80113 Indonesia</p>
+            </div>
+
+            <!-- Follow us -->
+            <div class="flex flex-col gap-1">
+              <p class="text-heading font-medium ">Follow us</p>
+              <li class="flex flex-col gap-0">
+               <a href="">Linkedin</a>
+               <a href="">Instagram</a>
+               <a href="">Twitter</a>
+              </li>
+            </div>
+
+            <button class="w-full h-fit flex gap-1 text-heading md:w-fit">
+              <label class="h-fit px-5 py-3 bg-white rounded-full text-heading border-1 border-border-default" for="">Get in touch</label>
+              <span class="h-full p-3 bg-white rounded-full border-1 border-border-default">
+                <svg class="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
+                </svg>
+              </span>
+
+            </button>
+           </section>
+
+
+        <script src="../js/index.js"></script>
+    </body>
+</html>

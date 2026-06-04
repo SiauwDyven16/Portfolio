@@ -1,0 +1,249 @@
+@import 'tailwindcss';
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700,800,900&display=swap');
+
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../assets/fonts/Nohemi/Nohemi-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* 
+  Tailwind CSS v4 Configuration
+  Automatic content scanning is active. 
+  Explicitly adding sources for HTML and JS directories.
+*/
+@source '../pages/**/*.html';
+@source '../js/**/*.js';
+
+@theme {
+    /* Brand Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Outfit', Georgia, serif;
+    --font-display: 'Playfair Display', serif;
+    --font-switzer: 'Switzer', sans-serif;
+    --font-nohemi: 'Nohemi', sans-serif;
+
+    --color-heading: #1a1a1a;
+    --color-paragraph: #8c8c8c;
+    --color-text-label: #8c8c8c;
+    --color-page: #ffffff;
+    --color-default: #f4f4f4;
+    --color-border-default: #dedede;
+
+    /* Premium Custom Color Palette (Navy Blue & Warm Amber/Gold) */
+    --color-primary-50: #f4f6f8;
+    --color-primary-100: #e7ebf0;
+    --color-primary-200: #c2cedc;
+    --color-primary-300: #9cb1c8;
+    --color-primary-400: #5177a0;
+    --color-primary-500: #0f4c81; /* Classic Blue / Navy */
+    --color-primary-600: #0d4474;
+    --color-primary-700: #0b3961;
+    --color-primary-800: #092e4e;
+    --color-primary-900: #07253f;
+    --color-primary-950: #041220;
+
+    --color-accent-50: #fefbf3;
+    --color-accent-100: #fdf5e2;
+    --color-accent-200: #fae6b8;
+    --color-accent-300: #f6d28f;
+    --color-accent-400: #efa83e;
+    --color-accent-500: #e59325; /* Warm Amber Gold */
+    --color-accent-600: #c9781b;
+    --color-accent-700: #a75c17;
+    --color-accent-800: #854514;
+    --color-accent-900: #6d3612;
+    --color-accent-950: #3b1907;
+
+    /* Premium Glassmorphic / Subtle Border Radius */
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2rem;
+
+    /* Micro-animations */
+    --animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    --animate-slide-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    --animate-scale-up: scale-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    --animate-float: float 3s ease-in-out infinite;
+    --animate-rotate-slow: rotate-slow 20s linear infinite;
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes slide-up {
+        from {
+            transform: translateY(24px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes scale-up {
+        from {
+            transform: scale(0.95);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+    @keyframes rotate-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+/* Custom Base Layer adjustments */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
+
+    body {
+        background-color: var(--color-primary-50);
+        color: var(--color-primary-950);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .display {
+        /* font-family: var(--font-nohemi); */
+        @apply text-heading text-[80px] font-semibold md:text-[150px] xl:text-[302px] tracking-tight;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-switzer);
+        @apply tracking-tight leading-[110%];
+    }
+
+    h1 {
+        @apply text-heading text-4xl font-medium md:text-[66px] xl:text-[100px];
+    }
+
+    h2 {
+        @apply text-heading text-xl font-medium md:text-[26px] xl:text-[28px];
+    }
+
+    h3 {
+        @apply text-heading text-xs font-semibold leading-[90%] md:text-[22px] xl:text-[62px];
+    }
+
+    h4 {
+        @apply text-heading text-xl font-medium tracking-tight leading-[110%] md:text-[26px] xl:text-[28px];
+    }
+
+    p, a {
+        @apply max-w-[450px] text-paragraph text-xs font-normal md:text-sm md:font-medium xl:text-sm;
+    }
+
+    h6,
+    label,
+    button {
+        @apply text-text-label text-sm font-medium md:text-base;
+    }
+}
+
+/* Custom Utilities for Glassmorphism & premium UI touches */
+@utility glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@utility glass-dark {
+    background: rgba(4, 18, 32, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@utility text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--color-primary-800), var(--color-accent-600));
+}
