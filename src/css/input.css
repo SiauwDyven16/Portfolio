@@ -65,7 +65,6 @@
     font-display: swap;
 }
 
-
 /* 
   Tailwind CSS v4 Configuration
   Automatic content scanning is active. 
@@ -189,14 +188,14 @@
 
     .display {
         /* font-family: var(--font-nohemi); */
-        @apply text-heading text-[80px] font-semibold md:text-[150px] xl:text-[302px] tracking-tight;
+        @apply text-heading text-[80px] font-semibold tracking-tight md:text-[150px] xl:text-[302px];
     }
 
     h1,
     h2,
     h3 {
         font-family: var(--font-switzer);
-        @apply tracking-tight leading-[110%];
+        @apply leading-[110%] tracking-tight;
     }
 
     h1 {
@@ -208,15 +207,16 @@
     }
 
     h3 {
-        @apply text-heading text-xs font-semibold leading-[90%] md:text-[22px] xl:text-[62px];
+        @apply text-heading text-xs leading-[90%] font-semibold md:text-[22px] xl:text-[62px];
     }
 
     h4 {
-        @apply text-heading text-xl font-medium tracking-tight leading-[110%] md:text-[26px] xl:text-[28px];
+        @apply text-heading text-xl leading-[110%] font-medium tracking-tight md:text-[26px] xl:text-[28px];
     }
 
-    p, a {
-        @apply max-w-[450px] text-paragraph text-xs font-normal md:text-sm md:font-medium xl:text-sm;
+    p,
+    a {
+        @apply text-paragraph max-w-[450px] text-xs font-normal md:text-sm md:font-medium xl:text-sm;
     }
 
     h6,

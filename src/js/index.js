@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.1,
     };
 
     let delay = 0;
     let delayTimeout;
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
@@ -21,8 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, delay);
                 delay += 100; // Stagger delay for elements appearing at the same time
                 clearTimeout(delayTimeout);
-                delayTimeout = setTimeout(() => { delay = 0; }, 1000);
-                
+                delayTimeout = setTimeout(() => {
+                    delay = 0;
+                }, 400);
+
                 observer.unobserve(entry.target);
             }
         });
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = el.textContent.trim();
         const words = text.split(/\s+/);
         el.innerHTML = ''; // Clear text
-        
+
         words.forEach(word => {
             const span = document.createElement('span');
             // We use inline-block to allow transforms on the span
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const splitTextObserver = new IntersectionObserver((entries) => {
+    const splitTextObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const spans = entry.target.querySelectorAll('span');
@@ -65,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Apply to all major components in sections (excluding the sidebar and split text)
     const components = document.querySelectorAll('section h1:not(.split-text-animate), section h2, section h3, section h4, section p, section img, section li, section .grid > div, section button');
-    
-    components.forEach((el) => {
+
+    components.forEach(el => {
         // Set initial hidden state and transition
         el.classList.add('transform', '-translate-y-8', 'opacity-0', 'transition-all', 'duration-[800ms]', 'ease-[cubic-bezier(0.22,1,0.36,1)]');
         observer.observe(el);
@@ -109,26 +111,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add random floating stars
     const createRandomStars = () => {
         const sections = document.querySelectorAll('section');
-        
+
         sections.forEach(section => {
             // Ensure section can contain absolute elements
             section.classList.add('relative', 'overflow-hidden');
-            
+
             // Decide to add 1 star per section (or sometimes 2) to keep count low
             const starCount = Math.random() > 0.3 ? 1 : 0; // 70% chance to have a star
-            
+
             for (let i = 0; i < starCount; i++) {
                 // Wrapper to handle position and centering independently of the rotation
                 const wrapper = document.createElement('div');
                 wrapper.className = 'absolute pointer-events-none z-0';
-                
+
                 // Random position within the section
                 const top = 10 + Math.random() * 80;
                 const left = 10 + Math.random() * 80;
-                
+
                 // Larger sizes (200px to 450px)
                 const size = 200 + Math.random() * 250;
-                
+
                 wrapper.style.top = `${top}%`;
                 wrapper.style.left = `${left}%`;
                 wrapper.style.width = `${size}px`;
@@ -140,10 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 star.src = '../assets/svg/star.svg';
                 // Very low opacity so it doesn't distract, given the large size
                 star.className = 'w-full h-full animate-rotate-slow opacity-[0.05]';
-                
+
                 const delay = Math.random() * -30;
                 const duration = 30 + Math.random() * 20; // 30-50s (very slow rotation)
-                
+
                 star.style.animationDelay = `${delay}s`;
                 star.style.animationDuration = `${duration}s`;
 

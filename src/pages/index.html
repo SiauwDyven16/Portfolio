@@ -7,19 +7,22 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"rel="stylesheet"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="../css/output.css" />
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="fixed top-0 z-50 w-full flex justify-between items-center py-4 px-8">
+        <nav class="fixed top-0 z-50 flex w-full items-center justify-between px-8 py-4">
             <!-- Logo -->
-            <div class="flex h-11 w-11 items-center justify-center rounded-md border border-border-default bg-default p-2">
-                <p class="text-xl text-heading font-serif font-medium">DS</p>
+            <div class="border-border-default bg-default flex h-11 w-11 items-center justify-center rounded-md border p-2">
+                <p class="text-heading font-serif text-xl font-medium">DS</p>
             </div>
 
             <!-- Menu -->
-            <div id="menu-btn" class="flex h-11 w-11 items-center justify-center rounded-md border border-border-default bg-default p-2 cursor-pointer hover:bg-gray-100 transition-colors">
+            <div id="menu-btn" class="border-border-default bg-default flex h-11 w-11 cursor-pointer items-center justify-center rounded-md border p-2 transition-colors hover:bg-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0z" fill="none" />
                     <path
@@ -31,241 +34,383 @@
         </nav>
 
         <!-- Sidebar -->
-        <aside id="sidebar" class="group fixed top-0 right-0 z-[60] h-full w-screen max-w-full bg-page transform -translate-y-full transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] flex flex-col">
+        <aside
+            id="sidebar"
+            class="group bg-page fixed top-0 right-0 z-[60] flex h-full w-screen max-w-full -translate-y-full transform flex-col transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+        >
             <!-- Sidebar Header -->
-            <div class="px-8 py-4 flex justify-end items-center">
-                <button id="close-sidebar-btn" class="p-2 rounded-md hover:bg-default transition-colors">
+            <div class="flex items-center justify-end px-8 py-4">
+                <button id="close-sidebar-btn" class="hover:bg-default rounded-md p-2 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/>
+                        <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z" />
                     </svg>
                 </button>
             </div>
-            
+
             <!-- Sidebar Links -->
-            <div class="flex flex-col justify-center items-center p-6 gap-6 flex-grow">
-                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[300ms]">
-                    <a href="#home" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>Home</h2></a>
+            <div class="flex flex-grow flex-col items-center justify-center gap-6 p-6">
+                <div
+                    class="-translate-y-8 transform opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[300ms]"
+                >
+                    <a href="#home" class="sidebar-link hover:text-accent-500 text-xl font-medium transition-colors"><h2>Home</h2></a>
                 </div>
-                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[375ms]">
-                    <a href="#about" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>About</h2></a>
+                <div
+                    class="-translate-y-8 transform opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[375ms]"
+                >
+                    <a href="#about" class="sidebar-link hover:text-accent-500 text-xl font-medium transition-colors"><h2>About</h2></a>
                 </div>
-                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[450ms]">
-                    <a href="#skills" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>Skills</h2></a>
+                <div
+                    class="-translate-y-8 transform opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[450ms]"
+                >
+                    <a href="#skills" class="sidebar-link hover:text-accent-500 text-xl font-medium transition-colors"><h2>Skills</h2></a>
                 </div>
-                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[525ms]">
-                    <a href="#works" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>Works</h2></a>
+                <div
+                    class="-translate-y-8 transform opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[525ms]"
+                >
+                    <a href="#works" class="sidebar-link hover:text-accent-500 text-xl font-medium transition-colors"><h2>Works</h2></a>
                 </div>
-                <div class="transform -translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[600ms]">
-                    <a href="#more" class="sidebar-link text-xl font-medium hover:text-accent-500 transition-colors"><h2>More</h2></a>
+                <div
+                    class="-translate-y-8 transform opacity-0 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.translate-y-0]:translate-y-0 group-[.translate-y-0]:opacity-100 group-[.translate-y-0]:delay-[600ms]"
+                >
+                    <a href="#more" class="sidebar-link hover:text-accent-500 text-xl font-medium transition-colors"><h2>More</h2></a>
                 </div>
             </div>
         </aside>
 
         <!-- Hero Section -->
-        <section id="home" class="py-20 px-8 flex flex-col">
+        <section id="home" class="flex flex-col px-8 py-20">
+            <!-- Heading -->
+            <div class="mb-20 flex flex-col">
+                <h1 class="display text-left leading-[90%]">dyven</h1>
+                <h1 class="display text-right leading-[90%]">siauw</h1>
+            </div>
 
-          <!-- Heading -->
-          <div class="mb-20 flex flex-col">
-            <h1 class="display leading-[90%] text-left">dyven</h1>
-            <h1 class="display leading-[90%] text-right">siauw</h1>
-          </div>
+            <!-- Description -->
+            <div class="mb-20 flex flex-col gap-6">
+                <p>Greetings — Dyven Siauw from SBXone. <br />A UI/UX Designer based in Bali, Indonesia.</p>
+                <p>2026 <br />UI/UX Design.</p>
+                <li class="flex flex-col gap-0">
+                    <a href="">Linkedin</a>
+                    <a href="">Instagram</a>
+                    <a href="">Github</a>
+                </li>
+            </div>
 
-          <!-- Description -->
-           <div class="mb-20 flex flex-col gap-6">
-             <p>Greetings — Dyven Siauw from SBXone. <br>A UI/UX Designer based in Bali, Indonesia.</p>
-             <p>2026 <br>UI/UX Design.</p>
-             <li class="flex flex-col gap-0">
-               <a href="">Linkedin</a>
-               <a href="">Instagram</a>
-               <a href="">Github</a>
-              </li>
-           </div>
+            <!-- Content Header -->
+            <div class="border-border-default mb-5 flex justify-between border-b pb-2">
+                <p>Works</p>
+                <p>Januari - Juni</p>
+            </div>
 
-          <!-- Content Header -->
-          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
-            <p>Works</p>
-            <p>Januari - Juni</p>
-          </div>
-
-          <!-- Carrousell -->
-           <div class="w-full overflow-x-scroll flex gap-5">
-            <img class="w-40 h-40 flex-none rounded-lg bg-border-default" src="" alt="">
-            <img class="w-40 h-40 flex-none rounded-lg bg-border-default" src="" alt="">
-            <img class="w-40 h-40 flex-none rounded-lg bg-border-default" src="" alt="">
-           </div>
+            <!-- Carrousell -->
+            <div class="flex w-full gap-5 overflow-x-scroll">
+                <img class="bg-border-default h-40 w-40 flex-none rounded-lg" src="" alt="" />
+                <img class="bg-border-default h-40 w-40 flex-none rounded-lg" src="" alt="" />
+                <img class="bg-border-default h-40 w-40 flex-none rounded-lg" src="" alt="" />
+            </div>
         </section>
 
         <!-- About SBX Section -->
-        <section id="about" class="py-20 px-8">
+        <section id="about" class="px-8 py-20">
+            <!-- Heading -->
+            <h1 class="split-text-animate mb-10 leading-[110%] md:mb-40">Goes intern at SBXone Studio. Working as a UI/UX designer and front-end developer.</h1>
 
-          <!-- Heading -->
-          <h1 class="split-text-animate mb-10 md:mb-40 leading-[110%]">Goes intern at SBXone Studio. Working as a UI/UX designer and front-end developer.</h1>
+            <!-- Content Header -->
+            <div class="border-border-default mb-5 flex justify-between border-b pb-2 md:mb-10">
+                <p>About</p>
+                <p>SBXone</p>
+            </div>
 
-          <!-- Content Header -->
-          <div class="mb-5 pb-2 flex justify-between border-b border-border-default md:mb-10 ">
-            <p>About</p>
-            <p>SBXone</p>
-          </div>
+            <!-- Description -->
+            <div class="flex grid-cols-3 flex-col gap-5 md:grid">
+                <h3>About Intern.</h3>
+                <div class="mb-5 flex flex-col gap-5">
+                    <p>
+                        SBXone adalah sebuah agensi digital yang berfokus pada pengembangan web dan desain UI/UX. Didirikan oleh sekelompok siswa yang memiliki ketertarikan di bidang teknologi, SBXone
+                        hadir untuk memberikan solusi digital bagi UMKM dan startup.
+                    </p>
+                    <p>SBXone ini mengawali perjalanannya dari ketertarikan sang pendiri terhadap dunia pemrograman sejak duduk di bangku Sekolah Menengah Pertama (SMP) pada periode 2021–2022.</p>
+                    <p>
+                        Didorong oleh besarnya peluang dan fleksibilitas profesi seorang programmer, ia memutuskan untuk mendalami jurusan Rekayasa Perangkat Lunak (RPL) di tingkat Sekolah Menengah
+                        Kejuruan (SMK).
+                    </p>
+                    <p>Berbekal pemahaman terhadap potensi kerja lepas (freelance), pendiri bersama beberapa rekannya kemudian menginisiasi berdirinya SBXone pada 15 Desember 2024.</p>
+                </div>
 
-          <!-- Description -->
-           <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
-              <h3>My Intern Journey.</h3>
-              <div class="flex flex-col gap-5 mb-5 ">
-                <p>Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
-                <p>Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
-                <p>Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
-              </div>
-
-              <img class="w-40 h-40 flex-none rounded-lg bg-border-default place-self-end self-start" src="" alt="">
+                <img class="border-border-default h-40 w-auto flex-none place-self-end self-start rounded-lg border" src="../assets/images/Logo.jpg" alt="" />
             </div>
         </section>
 
         <!-- Skills Section -->
-          <section id="skills" class="py-20 px-8">
-
+        <section id="skills" class="px-8 py-20">
             <!-- Content Header -->
-          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
-            <p>Skills</p>
-            <p>Dyven Siauw</p>
-          </div>
-
-          <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
-
-            <!-- Heading -->
-              <h3>Skills I Have Learned.</h3>
-
-              <p class="mb-5">Since 8 Januari 2026, i have been learning many things as a designer in SBXone.</p>
-              <!-- Skills -->
-              <div class="flex flex-col gap-10 mb-5 ">
-                <!-- Skill -->
-                <div class="flex flex-col gap-2">
-                  <p class="text-heading font-medium ">- User Interface Principles</p>
-                  <p class="pl-5 border-l border-border-default">Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
-                </div>
-                <!-- Skill -->
-                <div class="flex flex-col gap-2">
-                  <p class="text-heading font-medium">- User Experience Principles</p>
-                  <p class="pl-3 border-l border-border-default ">Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
-                </div>
-                <!-- Skill -->
-                <div class="flex flex-col gap-2">
-                  <p class="text-heading font-medium">- Motion Design Principles</p>
-                  <p class="pl-5 border-l border-border-default">Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu yang besar terhadap teknologi.</p>
-                </div>
-              </div>
-              
+            <div class="border-border-default mb-5 flex justify-between border-b pb-2">
+                <p>Skills</p>
+                <p>Dyven Siauw</p>
             </div>
 
-          
-          </section>
+            <div class="flex grid-cols-3 flex-col gap-5 md:grid">
+                <!-- Heading -->
+                <h3>Skills I Have Learned.</h3>
+
+                <div class="mb-5 flex flex-col gap-5">
+                    <p class="">Sejak 8 Januari 2026, saya sudah mengalami banyak pembelajaran sebagai desainer di SBXone.</p>
+                    <p class="">Berikut beberapa skill yang saya pelajari, dan kuasai selama bekerja di SBXone.</p>
+                </div>
+
+                <!-- Skills -->
+                <div class="mb-5 flex flex-col gap-10">
+                    <!-- Skill -->
+                    <div class="flex flex-col gap-2">
+                        <p class="text-heading font-medium">- User Interface Principles</p>
+                        <p class="border-border-default border-l pl-5">
+                            Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu
+                            yang besar terhadap teknologi.
+                        </p>
+                    </div>
+                    <!-- Skill -->
+                    <div class="flex flex-col gap-2">
+                        <p class="text-heading font-medium">- User Experience Principles</p>
+                        <p class="border-border-default border-l pl-3">
+                            Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu
+                            yang besar terhadap teknologi.
+                        </p>
+                    </div>
+                    <!-- Skill -->
+                    <div class="flex flex-col gap-2">
+                        <p class="text-heading font-medium">- Motion Design Principles</p>
+                        <p class="border-border-default border-l pl-5">
+                            Ida Bagus Maha Indra Prasada lahir pada 27 Januari 1999 di sebuah desa kecil bernama Sandang Dauh Yeh, di Tabanan, Bali. Sejak kecil, ia sudah menunjukkan rasa ingin tahu
+                            yang besar terhadap teknologi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Works Section -->
-         <section id="works" class="py-20 px-8">
-
-          <!-- Content Header -->
-          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
-            <p>Works</p>
-            <p>Januari - Juni</p>
-          </div>
-
-          <!-- Item -->
-           <div class="w-full grid grid-cols-2 gap-5 md:gap-y-20">
-            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-80 xl:h-120" src="" alt="">
-            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-100 xl:h-160" src="" alt="">
-            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-100 xl:h-160" src="" alt="">
-            <img class="h-40 rounded-lg bg-border-default border border-border-default md:h-80 xl:h-120" src="" alt="">
-           </div>
-         </section>
-
-         <!-- Motto -->
-         <section id="more" class="py-20 px-8">
-
-          <!-- Content Header -->
-          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
-            <p>More</p>
-            <p>Dyven Siauw</p>
-          </div>
-
-          <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
-
-            <!-- Heading -->
-              <p>My Motto</p>
-              
-              <!-- Quotes -->
-              <div class="flex flex-col gap-5">
-                <h4 class="mb-5">"Sekali dalam hidup setiap orang, setidaknya, keberuntungan mengetuk pintunya."</h4>              
-                <p class="place-self-end self-start">John L. Bates, <br>1936</p>
-              </div>
+        <section id="works" class="px-8 py-20">
+            <!-- Content Header -->
+            <div class="border-border-default mb-5 flex justify-between border-b pb-2">
+                <p>Works</p>
+                <p>Januari - Juni</p>
             </div>
 
-          
-          </section>
+            <!-- Item -->
+            <!-- Setiap link href mengarah ke project-detail.html?id=[ID dari projects.js] -->
+            <div class="grid w-full grid-cols-2 gap-5 md:gap-y-20">
+                <a href="project-detail.html?id=radiocast" class="block overflow-hidden rounded-lg">
+                    <img
+                        class="h-40 w-full rounded-lg bg-white object-cover object-center transition-transform duration-500 hover:scale-105 md:h-80 xl:h-120"
+                        src="../assets/images/Radiocast-Cover.jpg"
+                        alt="Radiocast"
+                    />
+                </a>
+                <a href="project-detail.html?id=xpandable" class="block overflow-hidden rounded-lg">
+                    <img
+                        class="h-40 w-full rounded-lg bg-black object-cover object-center transition-transform duration-500 hover:scale-105 md:h-80 xl:h-120"
+                        src="../assets/images/Xpandable-Cover.jpg"
+                        alt="Xpandable"
+                    />
+                </a>
+                <a href="project-detail.html?id=thinker" class="block overflow-hidden rounded-lg">
+                    <img
+                        class="h-40 w-full rounded-lg bg-white object-cover object-center transition-transform duration-500 hover:scale-105 md:h-80 xl:h-120"
+                        src="../assets/images/Thinker-Cover.jpg"
+                        alt="Thinker"
+                    />
+                </a>
+                <a href="project-detail.html?id=gjf" class="block overflow-hidden rounded-lg">
+                    <img
+                        class="h-40 w-full rounded-lg bg-white object-cover object-center transition-transform duration-500 hover:scale-105 md:h-80 xl:h-120"
+                        src="../assets/images/GJF-Cover.jpg"
+                        alt="GJF"
+                    />
+                </a>
+            </div>
+        </section>
 
-         <!-- Tools -->
-         <section class="py-20 px-8 ">
-
-          <!-- Content Header -->
-          <div class="mb-5 pb-2 flex justify-between border-b border-border-default">
-            <p>More</p>
-            <p>Dyven Siauw</p>
-          </div>
-
-          <div class="flex flex-col gap-5 md:grid grid-cols-3 gap-5">
-
-            <!-- Heading -->
-              <p>Tools</p>
-              
-              <!-- Tools -->
-              <div class="grid grid-cols-2 gap-3 md:grid-cols-5 md:col-span-2">
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-                <div class="h-40 rounded-xl bg-default border border-border-default md:h-20 xl:h-40"></div>
-              </div>
+        <!-- Motto -->
+        <section id="more" class="px-8 py-20">
+            <!-- Content Header -->
+            <div class="border-border-default mb-5 flex justify-between border-b pb-2">
+                <p>More</p>
+                <p>Dyven Siauw</p>
             </div>
 
-          
-          </section>
+            <div class="flex grid-cols-3 flex-col gap-5 md:grid">
+                <!-- Heading -->
+                <p>My Motto</p>
 
-          <!-- Footer -->
-           <section class="bg-default flex flex-wrap justify-between gap-y-20 gap-x-5 pt-20 pb-20 px-8 border-t-1 border-border-default">
+                <!-- Quotes -->
+                <div class="flex flex-col gap-5">
+                    <h4 class="mb-5">"Sekali dalam hidup setiap orang, setidaknya, keberuntungan mengetuk pintunya."</h4>
+                    <p class="place-self-end self-start">John L. Bates, <br />1936</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools -->
+        <section class="px-8 py-20">
+            <!-- Content Header -->
+            <div class="border-border-default mb-5 flex justify-between border-b pb-2">
+                <p>More</p>
+                <p>Dyven Siauw</p>
+            </div>
+
+            <div class="flex grid-cols-3 flex-col gap-5 md:grid">
+                <!-- Heading -->
+                <p>Tools</p>
+
+                <!-- Tools -->
+                <div class="grid grid-cols-2 gap-3 md:col-span-2 md:grid-cols-5">
+                    <!-- HTML -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 32 32">
+                            <path d="M0 0h32v32H0z" fill="none" />
+                            <path fill="#e65100" d="m4 4l2 22l10 2l10-2l2-22Zm19.72 7H11.28l.29 3h11.86l-.802 9.335L15.99 25l-6.635-1.646L8.93 19h3.02l.19 2l3.86.77l3.84-.77l.29-4H8.84L8 8h16Z" />
+                        </svg>
+                    </div>
+                    <!-- CSS -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 32 32">
+                            <path d="M0 0h32v32H0z" fill="none" />
+                            <path
+                                fill="#7e57c2"
+                                d="M20 18h-2v-2h-2v2c0 .193 0 .703 1.254 1.033A3.345 3.345 0 0 1 20 22h2v2h2v-2c0-.388-.562-.851-1.254-1.034C20.356 20.34 20 18.84 20 18m-3.254 2.966C14.356 20.34 14 18.84 14 18h-2v-2h-2v8h2v-2h4v2h2v-2c0-.388-.562-.851-1.254-1.034"
+                            />
+                            <path
+                                fill="#7e57c2"
+                                d="M24 4H4v20a4 4 0 0 0 4 4h16.16A3.84 3.84 0 0 0 28 24.16V8a4 4 0 0 0-4-4m2 14h-2v-2h-2v2c0 .193 0 .703 1.254 1.033A3.345 3.345 0 0 1 26 22v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2Z"
+                            />
+                        </svg>
+                    </div>
+                    <!-- JS -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 16 16">
+                            <path d="M0 0h16v16H0z" fill="none" />
+                            <path
+                                fill="#ffca28"
+                                d="M2 2v12h12V2zm6 6h1v4a1.003 1.003 0 0 1-1 1H7a1.003 1.003 0 0 1-1-1v-1h1v1h1zm3 0h2v1h-2v1h1a1.003 1.003 0 0 1 1 1v1a1.003 1.003 0 0 1-1 1h-2v-1h2v-1h-1a1.003 1.003 0 0 1-1-1V9a1.003 1.003 0 0 1 1-1"
+                            />
+                        </svg>
+                    </div>
+                    <!-- TAILWIND -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 32 32">
+                            <path d="M0 0h32v32H0z" fill="none" />
+                            <path
+                                fill="#44a8b3"
+                                d="M9 13.7q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1m-7 8.4q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1"
+                            />
+                        </svg>
+                    </div>
+                    <!-- REACT -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 32 32">
+                            <path d="M0 0h32v32H0z" fill="none" />
+                            <path fill="#00bcd4" d="M16 12c7.444 0 12 2.59 12 4s-4.556 4-12 4s-12-2.59-12-4s4.556-4 12-4m0-2c-7.732 0-14 2.686-14 6s6.268 6 14 6s14-2.686 14-6s-6.268-6-14-6" />
+                            <path fill="#00bcd4" d="M16 14a2 2 0 1 0 2 2a2 2 0 0 0-2-2" />
+                            <path
+                                fill="#00bcd4"
+                                d="M10.458 5.507c2.017 0 5.937 3.177 9.006 8.493c3.722 6.447 3.757 11.687 2.536 12.392a.9.9 0 0 1-.457.1c-2.017 0-5.938-3.176-9.007-8.492C8.814 11.553 8.779 6.313 10 5.608a.9.9 0 0 1 .458-.1m-.001-2A2.87 2.87 0 0 0 9 3.875C6.13 5.532 6.938 12.304 10.804 19c3.284 5.69 7.72 9.493 10.74 9.493A2.87 2.87 0 0 0 23 28.124c2.87-1.656 2.062-8.428-1.804-15.124c-3.284-5.69-7.72-9.493-10.74-9.493Z"
+                            />
+                            <path
+                                fill="#00bcd4"
+                                d="M21.543 5.507a.9.9 0 0 1 .457.1c1.221.706 1.186 5.946-2.536 12.393c-3.07 5.316-6.99 8.493-9.007 8.493a.9.9 0 0 1-.457-.1C8.779 25.686 8.814 20.446 12.536 14c3.07-5.316 6.99-8.493 9.007-8.493m0-2c-3.02 0-7.455 3.804-10.74 9.493C6.939 19.696 6.13 26.468 9 28.124a2.87 2.87 0 0 0 1.457.369c3.02 0 7.455-3.804 10.74-9.493C25.061 12.304 25.87 5.532 23 3.876a2.87 2.87 0 0 0-1.457-.369"
+                            />
+                        </svg>
+                    </div>
+                    <!-- GIT -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 32 32">
+                            <path d="M0 0h32v32H0z" fill="none" />
+                            <path
+                                fill="#e64a19"
+                                d="M13.172 2.828L11.78 4.22l1.91 1.91l2 2A2.986 2.986 0 0 1 20 10.81a3.25 3.25 0 0 1-.31 1.31l2.06 2a2.68 2.68 0 0 1 3.37.57a2.86 2.86 0 0 1 .88 2.117a3.02 3.02 0 0 1-.856 2.109A2.9 2.9 0 0 1 23 19.81a2.93 2.93 0 0 1-2.13-.87a2.694 2.694 0 0 1-.56-3.38l-2-2.06a3 3 0 0 1-.31.12V20a3 3 0 0 1 1.44 1.09a2.92 2.92 0 0 1 .56 1.72a2.88 2.88 0 0 1-.878 2.128a2.98 2.98 0 0 1-2.048.871a2.981 2.981 0 0 1-2.514-4.719A3 3 0 0 1 16 20v-6.38a2.96 2.96 0 0 1-1.44-1.09a2.9 2.9 0 0 1-.56-1.72a2.9 2.9 0 0 1 .31-1.31l-3.9-3.9l-7.579 7.572a4 4 0 0 0-.001 5.658l10.342 10.342a4 4 0 0 0 5.656 0l10.344-10.344a4 4 0 0 0 0-5.656L18.828 2.828a4 4 0 0 0-5.656 0"
+                            />
+                        </svg>
+                    </div>
+                    <!-- FIGMA -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 32 32">
+                            <path d="M0 0h32v32H0z" fill="none" />
+                            <path fill="#f4511e" d="M12 4h4v8h-4a4 4 0 0 1-4-4a4 4 0 0 1 4-4" />
+                            <path fill="#ff8a65" d="M20 12h-4V4h4a4 4 0 0 1 4 4a4 4 0 0 1-4 4" />
+                            <rect width="8" height="8" x="16" y="12" fill="#29b6f6" rx="4" transform="rotate(180 20 16)" />
+                            <path fill="#7c4dff" d="M12 12h4v8h-4a4 4 0 0 1-4-4a4 4 0 0 1 4-4" />
+                            <path fill="#00e676" d="M12 20h4v4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4" />
+                        </svg>
+                    </div>
+                    <!-- CLAUDE -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 16 16">
+                            <path d="M0 0h16v16H0z" fill="none" />
+                            <g fill="#ff7043">
+                                <path d="m14.375 6.48l.49.28v.209l-.14.489l-5.937 1.397l-.558-1.387zm0 0" />
+                                <path d="m12.155 2.373l.683.143l.182.224l.173.535l-.072.342l-3.983 5.447L7.81 7.737l3.673-4.82z" />
+                                <path d="m8.719 1.522l.419-.28l.349.14l.349.49l-.957 5.748l-.65-.441l-.279-.769l.49-4.33z" />
+                                <path d="m4.239 1.614l.43-.55L4.95 1l.558.081l.275.216l2.004 4.442l.724 2.11l-.848.471l-3.231-5.864z" />
+                                <path d="m2.154 4.665l-.14-.56l.42-.488l.488.07h.14l2.933 2.165l.908.698l1.257.978l-.698 1.187l-.629-.489l-.419-.419l-4.05-2.863z" />
+                                <path d="M1.316 8.296L1 7.946v-.31l.316-.108l3.562.21l3.491.279l-.113.695l-6.66-.346z" />
+                                <path d="M3.411 11.931h-.698l-.278-.32v-.382l1.186-.838l4.82-3.068l.487.833z" />
+                                <path d="m4.738 13.883l-.28.07l-.418-.21l.07-.35l4.12-5.446l.558.768l-3.072 4.05z" />
+                                <path d="m8.23 14.581l-.21.28l-.419.14l-.349-.28l-.21-.42L8.09 8.646l.629.07z" />
+                                <path d="M11.791 13.045v.558l-.07.21l-.279.14l-.489-.066l-3.356-4.996l1.331-1.014l1.117 2.025l.105.733z" />
+                                <path d="m13.398 12.207l.07.349l-.21.279l-.21-.07l-1.187-.838l-1.815-1.606l-1.397-.978l.419-1.326l.698.419l.42.768z" />
+                                <path d="m12.49 8.645l1.746.14l.419.28l.279.418v.302l-.768.327l-3.911-.978l-1.606-.07l.419-1.466l1.117.838z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <!-- GEMINI -->
+                    <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 16 16">
+                            <path d="M0 0h16v16H0z" fill="none" />
+                            <path fill="#448aff" d="M15 8.014A7.457 7.457 0 0 0 8.014 15h-.028A7.456 7.456 0 0 0 1 8.014v-.028A7.456 7.456 0 0 0 7.986 1h.028A7.457 7.457 0 0 0 15 7.986z" />
+                        </svg>
+                    </div>
+                    <!-- <div class="bg-default border-border-default flex h-40 items-center justify-center rounded-xl border md:h-20 xl:h-40"></div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="bg-default border-border-default flex flex-wrap justify-between gap-x-5 gap-y-20 border-t-1 px-8 pt-20 pb-20">
             <h1 class="display leading-[70%]">DS</h1>
 
             <!-- Location -->
             <div class="flex flex-col gap-1">
-              <p class="text-heading font-medium ">Location</p>
-              <p>Denpasar City, Bali <br>80113 Indonesia</p>
+                <p class="text-heading font-medium">Location</p>
+                <p>Denpasar City, Bali <br />80113 Indonesia</p>
             </div>
 
             <!-- Follow us -->
             <div class="flex flex-col gap-1">
-              <p class="text-heading font-medium ">Follow us</p>
-              <li class="flex flex-col gap-0">
-               <a href="">Linkedin</a>
-               <a href="">Instagram</a>
-               <a href="">Twitter</a>
-              </li>
+                <p class="text-heading font-medium">Follow us</p>
+                <li class="flex flex-col gap-0">
+                    <a href="">Linkedin</a>
+                    <a href="">Instagram</a>
+                    <a href="">Twitter</a>
+                </li>
             </div>
 
-            <button class="w-full h-fit flex gap-1 text-heading md:w-fit">
-              <label class="h-fit px-5 py-3 bg-white rounded-full text-heading border-1 border-border-default" for="">Get in touch</label>
-              <span class="h-full p-3 bg-white rounded-full border-1 border-border-default">
-                <svg class="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
-                  <path d="M0 0h24v24H0z" fill="none" />
-                  <path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
-                </svg>
-              </span>
-
+            <button class="text-heading flex h-fit w-full gap-1 md:w-fit">
+                <label class="text-heading border-border-default h-fit rounded-full border-1 bg-white px-5 py-3" for="">Get in touch</label>
+                <span class="border-border-default h-full rounded-full border-1 bg-white p-3">
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </span>
             </button>
-           </section>
+        </section>
 
-
+        <script src="../js/projects.js"></script>
         <script src="../js/index.js"></script>
     </body>
 </html>

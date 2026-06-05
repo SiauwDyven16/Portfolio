@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project Detail - Dyven Siauw</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/output.css" />
+    </head>
+    <body class="bg-page text-default selection:bg-accent-500 selection:text-white">
+        <!-- Navbar -->
+        <nav class="fixed top-0 z-50 flex w-full items-center justify-between px-8 py-4">
+            <!-- Back Button -->
+            <a href="index.html" class="border-border-default bg-default flex h-11 w-11 items-center justify-center rounded-md border p-2 transition-colors hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8l8 8l1.41-1.41L7.83 13H20v-2z" />
+                </svg>
+            </a>
+        </nav>
+
+        <!-- Project Header / Hero -->
+        <section class="flex flex-col px-8 pt-32 pb-10">
+            <!-- Project Title -->
+            <div class="mb-10 w-full overflow-hidden">
+                <h1 id="project-title" class="display text-left leading-[90%] whitespace-nowrap"></h1>
+            </div>
+
+            <!-- Project Meta -->
+            <div class="mb-10 grid grid-cols-2 gap-5 md:grid-cols-4">
+                <div class="flex flex-col gap-1">
+                    <p class="text-heading font-medium">Role</p>
+                    <p id="project-role"></p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-heading font-medium">Year</p>
+                    <p id="project-year"></p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-heading font-medium">Client</p>
+                    <p id="project-client"></p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="text-heading font-medium">Link</p>
+                    <a id="project-live-link" href="#" class="underline"></a>
+                </div>
+            </div>
+
+            <!-- Cover Image -->
+            <div class="flex gap-5 w-full">
+                <img id="project-cover" class="bg-white w-full rounded-lg object-contain object-center border border-border-default md:h-120" src="" alt="Project Cover" />
+                <img id="project-cover" class="bg-white w-full rounded-lg object-contain object-center border border-border-default md:h-120" src="" alt="Project Cover" />
+                <img id="project-cover" class="bg-white w-full rounded-lg object-contain object-center border border-border-default md:h-120" src="" alt="Project Cover" />
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="px-8 py-20">
+            <div class="flex grid-cols-3 flex-col gap-5 md:grid">
+                <h3>Overview.</h3>
+                <div id="project-overview" class="flex flex-col gap-5 md:col-span-2"></div>
+            </div>
+        </section>
+
+        <!-- Image Gallery / Showcase -->
+        <section class="px-8 py-20">
+            <div id="project-gallery" class="flex grid-cols-2 flex-col gap-5 md:grid md:gap-y-10"></div>
+        </section>
+
+        <!-- Next / Previous Navigation -->
+        <section class="border-border-default flex justify-between border-t border-b px-8 py-10">
+            <div id="nav-prev" class="flex flex-col">
+                <p class="text-sm">Previous</p>
+                <a href="#" class="text-heading text-xl font-medium hover:underline"></a>
+            </div>
+            <div id="nav-next" class="flex flex-col text-right">
+                <p class="text-sm">Next</p>
+                <a href="#" class="text-heading text-xl font-medium hover:underline"></a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="bg-default border-border-default flex flex-wrap justify-between gap-x-5 gap-y-20 px-8 pt-20 pb-20">
+            <h1 class="display leading-[70%]">DS</h1>
+
+            <!-- Location -->
+            <div class="flex flex-col gap-1">
+                <p class="text-heading font-medium">Location</p>
+                <p>Denpasar City, Bali <br />80113 Indonesia</p>
+            </div>
+
+            <!-- Follow us -->
+            <div class="flex flex-col gap-1">
+                <p class="text-heading font-medium">Follow us</p>
+                <li class="flex flex-col gap-0">
+                    <a href="">Linkedin</a>
+                    <a href="">Instagram</a>
+                    <a href="">Twitter</a>
+                </li>
+            </div>
+
+            <button class="text-heading flex h-fit w-full gap-1 md:w-fit">
+                <label class="text-heading border-border-default h-fit rounded-full border-1 bg-white px-5 py-3" for="">Get in touch</label>
+                <span class="border-border-default h-full rounded-full border-1 bg-white p-3">
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </span>
+            </button>
+        </section>
+
+        <!-- Load projects data first, then the detail renderer -->
+        <script src="../js/projects.js"></script>
+        <script src="../js/project-detail.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>
