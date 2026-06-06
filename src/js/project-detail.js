@@ -57,39 +57,50 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('project-year').textContent = project.year;
     document.getElementById('project-client').textContent = project.client;
 
-    // Render live link
-    const liveLink = document.getElementById('project-live-link');
-    if (project.liveUrl) {
-        liveLink.href = project.liveUrl;
-        liveLink.textContent = 'View Live Site';
-    } else {
-        liveLink.textContent = 'Not Available';
-        liveLink.classList.add('opacity-50', 'cursor-not-allowed');
-        liveLink.removeAttribute('href');
+    const creatorEl = document.getElementById('project-creator');
+    if (creatorEl) creatorEl.textContent = project.creator || '';
+
+    // Render overview — supports both single <p> and multi-paragraph containers
+    const overviewEl = document.getElementById('project-overview');
+    if (overviewEl) {
+        if (overviewEl.tagName === 'P') {
+            // Single <p> element — join paragraphs with a space
+            overviewEl.textContent = Array.isArray(project.overview)
+                ? project.overview.join(' ')
+                : project.overview;
+        } else {
+            // Container <div> — render each paragraph as a <p> tag
+            overviewEl.innerHTML = project.overview.map(p => `<p>${p}</p>`).join('');
+        }
     }
 
-    // Render cover image
-    const coverImg = document.getElementById('project-cover');
-    coverImg.src = project.coverImage;
-    coverImg.alt = `${project.title} Cover`;
-    // Terapkan warna background cover
-    // coverImg.className = `bg-border-default h-60 w-full rounded-lg object-cover object-center md:h-120 ${project.coverBg}`;
+    // Render mockup images — inject into #project-mockup
+    const mockupContainer = document.getElementById('project-mockup');
+    if (mockupContainer) {
+        const mockups = project.mockup || [];
+        mockupContainer.innerHTML = '';
+        mockups.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `${project.title} Mockup ${index + 1}`;
+            img.className = 'bg-white w-[200px] aspect-square rounded-xl object-cover object-center border border-border-default md:w-full md:aspect-none';
+            mockupContainer.appendChild(img);
+        });
+    }
 
-    // Render paragraf overview
-    const overviewContainer = document.getElementById('project-overview');
-    overviewContainer.innerHTML = project.overview.map(p => `<p>${p}</p>`).join('');
-
-    // Render gallery
-    const galleryContainer = document.getElementById('project-gallery');
-    project.gallery.forEach((src, index) => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = `${project.title} Showcase ${index + 1}`;
-        // Gambar ke-3 dan seterusnya akan full-width di desktop
-        const isWide = index >= 2;
-        img.className = `bg-border-default h-60 w-full rounded-lg object-cover object-center md:h-100 ${isWide ? 'md:col-span-2' : ''}`;
-        galleryContainer.appendChild(img);
-    });
+    // Render screen images — inject into #project-screen
+    const screenContainer = document.getElementById('project-screen');
+    if (screenContainer) {
+        const screens = project.screen || [];
+        screenContainer.innerHTML = '';
+        screens.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `${project.title} Screen ${index + 1}`;
+            img.className = 'bg-white w-full rounded-lg object-contain object-center';
+            screenContainer.appendChild(img);
+        });
+    }
 
     // --- 4. Render navigasi Previous / Next project ---
     const currentIndex = projects.findIndex(p => p.id === projectId);
@@ -100,19 +111,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevLink = document.getElementById('nav-prev');
     const nextLink = document.getElementById('nav-next');
 
-    if (prevProject) {
-        prevLink.querySelector('a').href = `project-detail.html?id=${prevProject.id}`;
-        prevLink.querySelector('a').textContent = prevProject.title;
-    } else {
-        prevLink.classList.add('opacity-30', 'pointer-events-none');
-        prevLink.querySelector('a').textContent = '—';
+    if (prevLink) {
+        if (prevProject) {
+            prevLink.querySelector('a').href = `project-detail.html?id=${prevProject.id}`;
+            prevLink.querySelector('a').textContent = prevProject.title;
+        } else {
+            prevLink.classList.add('opacity-30', 'pointer-events-none');
+            prevLink.querySelector('a').textContent = '—';
+        }
     }
 
-    if (nextProject) {
-        nextLink.querySelector('a').href = `project-detail.html?id=${nextProject.id}`;
-        nextLink.querySelector('a').textContent = nextProject.title;
-    } else {
-        nextLink.classList.add('opacity-30', 'pointer-events-none');
-        nextLink.querySelector('a').textContent = '—';
+    if (nextLink) {
+        if (nextProject) {
+            nextLink.querySelector('a').href = `project-detail.html?id=${nextProject.id}`;
+            nextLink.querySelector('a').textContent = nextProject.title;
+        } else {
+            nextLink.classList.add('opacity-30', 'pointer-events-none');
+            nextLink.querySelector('a').textContent = '—';
+        }
     }
 });

@@ -214,16 +214,19 @@
         @apply text-heading text-xl leading-[110%] font-medium tracking-tight md:text-[26px] xl:text-[28px];
     }
 
-    p,
-    a {
+    p {
         @apply text-paragraph max-w-[450px] text-xs font-normal md:text-sm md:font-medium xl:text-sm;
     }
 
-    h6,
+    a {
+        @apply text-paragraph text-xs font-normal md:text-sm md:font-medium xl:text-sm;
+    }
+
+    /* h6,
     label,
     button {
         @apply text-text-label text-sm font-medium md:text-base;
-    }
+    } */
 }
 
 /* Custom Utilities for Glassmorphism & premium UI touches */

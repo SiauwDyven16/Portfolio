@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "build": "pnpm dlx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css",
+    "watch": "pnpm dlx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "format": "prettier --write ."
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,5 +19,9 @@
       "onFail": "download"
     }
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  }
 }

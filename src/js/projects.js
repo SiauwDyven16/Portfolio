@@ -26,12 +26,14 @@ const projects = [
         role: 'UI/UX Designer',
         year: '2026',
         client: 'SBXone',
+        creator: 'Dyven Siauw',
         liveUrl: null,
         overview: [
             'Radiocast adalah sebuah aplikasi pemutar radio streaming yang dirancang untuk memberikan pengalaman mendengarkan radio yang modern dan intuitif.',
             'Project ini berfokus pada kemudahan navigasi dan tampilan yang bersih, memungkinkan pengguna untuk menemukan dan mendengarkan stasiun radio favorit mereka dengan cepat.',
         ],
-        gallery: ['../assets/images/Radiocast/Radiocast-Home.webp', '../assets/images/Radiocast/Radiocast-onboard.jpg', '../assets/images/Radiocast/Radiocast-home.jpg'],
+        mockup: ['../assets/images/Radiocast/Mockup/Radiocast-Cover-1.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-2.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-3.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-4.webp'],
+        screen: ['../assets/images/Radiocast/Screen/Radiocast-home.webp', '../assets/images/Radiocast/Screen/Radiocast-onboard.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastDesc.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastList.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastPlay.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastSearch.webp'],
     },
     {
         id: 'xpandable',
@@ -41,12 +43,14 @@ const projects = [
         role: 'UI/UX Designer & Front-end Developer',
         year: '2026',
         client: 'SBXone',
+        creator: 'Dyven Siauw',
         liveUrl: null,
         overview: [
             'Xpandable adalah platform yang dirancang untuk membantu UMKM mengembangkan kehadiran digital mereka dengan tools yang mudah digunakan.',
             'Saya bertanggung jawab atas keseluruhan desain UI/UX dari penelitian pengguna hingga pembuatan prototype interaktif di Figma.',
         ],
-        gallery: ['../assets/images/Xpandable-Cover.jpg'],
+        mockup: ['../assets/images/Radiocast/Mockup/Radiocast-Cover-1.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-2.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-3.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-4.webp'],
+        screen: ['../assets/images/Radiocast/Screen/Radiocast-home.webp', '../assets/images/Radiocast/Screen/Radiocast-onboard.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastDesc.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastList.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastPlay.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastSearch.webp'],
     },
     {
         id: 'thinker',
@@ -56,12 +60,14 @@ const projects = [
         role: 'UI/UX Designer',
         year: '2026',
         client: 'SBXone',
+        creator: 'Dyven Siauw',
         liveUrl: null,
         overview: [
             'Thinker adalah aplikasi journaling dan manajemen ide yang membantu pengguna mengorganisir pikiran mereka secara visual.',
             'Desain berfokus pada pengalaman menulis yang tenang dan bebas gangguan, dengan fitur kategorisasi dan tagging yang intuitif.',
         ],
-        gallery: ['../assets/images/Thinker-Cover.jpg'],
+        mockup: ['../assets/images/Radiocast/Mockup/Radiocast-Cover-1.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-2.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-3.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-4.webp'],
+        screen: ['../assets/images/Radiocast/Screen/Radiocast-home.webp', '../assets/images/Radiocast/Screen/Radiocast-onboard.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastDesc.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastList.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastPlay.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastSearch.webp'],
     },
     {
         id: 'gjf',
@@ -71,11 +77,13 @@ const projects = [
         role: 'UI/UX Designer',
         year: '2026',
         client: 'SBXone',
+        creator: 'Dyven Siauw',
         liveUrl: null,
         overview: [
             'GJF adalah sebuah platform yang menghubungkan para freelancer dengan klien potensial di Indonesia.',
             'Project ini menekankan pada kemudahan proses onboarding bagi freelancer baru dan sistem pencarian yang cerdas untuk klien.',
         ],
-        gallery: ['../assets/images/GJF-Cover.jpg'],
+        mockup: ['../assets/images/Radiocast/Mockup/Radiocast-Cover-1.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-2.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-3.webp', '../assets/images/Radiocast/Mockup/Radiocast-Cover-4.webp'],
+        screen: ['../assets/images/Radiocast/Screen/Radiocast-home.webp', '../assets/images/Radiocast/Screen/Radiocast-onboard.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastDesc.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastList.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastPlay.webp', '../assets/images/Radiocast/Screen/Radiocast-podcastSearch.webp'],
     },
 ];
