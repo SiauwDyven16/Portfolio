@@ -105,8 +105,8 @@ const projects = [
         creator: 'Dyven Siauw',
         liveUrl: null,
         overview: [
-            'Thinker adalah aplikasi journaling dan manajemen ide yang membantu pengguna mengorganisir pikiran mereka secara visual.',
-            'Desain berfokus pada pengalaman menulis yang tenang dan bebas gangguan, dengan fitur kategorisasi dan tagging yang intuitif.',
+            'Thinker adalah sebuah website agensi kreatif, dengan gaya visual yang unik namun tetap menjaga keseimbangan dan kerapihan setiap komponen.',
+            'Project ini merupakan project pertama saya sebagai ui/ux designer di sbxone.',
         ],
         mockup: ['../assets/images/Thinker/Mockup/Thinker-Cover-1.webp', '../assets/images/Thinker/Mockup/Thinker-Cover-2.webp', '../assets/images/Thinker/Mockup/Thinker-Cover-3.webp', '../assets/images/Thinker/Mockup/Thinker-Cover-4.webp'],
         screen: ['../assets/images/Thinker/Screen/Thinker-Desktop.webp'],
@@ -123,8 +123,8 @@ const projects = [
         creator: 'Dyven Siauw',
         liveUrl: null,
         overview: [
-            'GJF adalah sebuah platform yang menghubungkan para freelancer dengan klien potensial di Indonesia.',
-            'Project ini menekankan pada kemudahan proses onboarding bagi freelancer baru dan sistem pencarian yang cerdas untuk klien.',
+            'Global Journalist Federation adalah sebuah website organisasi jurnalis internasional, dengan gaya visual modern namun tetap terasa profesional dan berwibawa.',
+            'Dengan warna merah sebagai warna utama, website ini memberikan nuansa yang berani, tegas, dan penuh semangat, namun disisi lain warna merah juga melambangkan tragedi yang pernah terjadi kepada para jurnalis.',
         ],
         mockup: ['../assets/images/GJF/Mockup/GJF-Cover-1.webp', '../assets/images/GJF/Mockup/GJF-Cover-2.webp', '../assets/images/GJF/Mockup/GJF-Cover-3.webp', '../assets/images/GJF/Mockup/GJF-Cover-4.webp'],
         screen: ['../assets/images/GJF/Screen/GJF-desktop.webp'],
