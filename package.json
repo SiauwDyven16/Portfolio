@@ -3,22 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "packageManager": "pnpm@11.5.2",
   "scripts": {
-    "build": "pnpm dlx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css",
-    "watch": "pnpm dlx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css",
+    "watch": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch",
     "format": "prettier --write ."
-},
-
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.0.4",
-      "onFail": "download"
-    }
-  },
   "type": "module",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.0",

@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 delay += 0; // Stagger delay for elements appearing at the same time
                 clearTimeout(delayTimeout);
                 delayTimeout = setTimeout(() => {
-                    delay =0;
-                }, 0);
+                    delay =+100;
+                }, 400);
 
                 observer.unobserve(entry.target);
             }
