@@ -93,6 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (screenContainer) {
         const screens = project.screen || [];
         screenContainer.innerHTML = '';
+
+        // Layout: website = full-width (no grid), app = 4-column grid
+        if (project.type === 'website') {
+            screenContainer.className = 'flex flex-col gap-5 w-full border border-border-default rounded-xl overflow-hidden';
+        } else {
+            screenContainer.className = 'grid grid-cols-4 gap-5 w-full';
+        }
+
         screens.forEach((src, index) => {
             const img = document.createElement('img');
             img.src = src;

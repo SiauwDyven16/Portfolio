@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     entry.target.classList.remove('-translate-y-8', 'opacity-0');
                     entry.target.classList.add('translate-y-0', 'opacity-100');
                 }, delay);
-                delay += 100; // Stagger delay for elements appearing at the same time
+                delay += 0; // Stagger delay for elements appearing at the same time
                 clearTimeout(delayTimeout);
                 delayTimeout = setTimeout(() => {
                     delay =0;
-                }, 400);
+                }, 0);
 
                 observer.unobserve(entry.target);
             }
@@ -156,4 +156,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     createRandomStars();
+
+    // ---- Works Carousel ----
+    const carouselTrack = document.getElementById('works-carousel-track');
+    const carouselPrev  = document.getElementById('carousel-prev');
+    const carouselNext  = document.getElementById('carousel-next');
+
+    if (carouselTrack && carouselPrev && carouselNext) {
+
+        // Calculate the scroll amount: width of the first card + gap
+        const getScrollAmount = () => {
+            const firstCard = carouselTrack.querySelector('.carousel-card');
+            if (!firstCard) return 300;
+            const style = window.getComputedStyle(carouselTrack);
+            const gap = parseFloat(style.gap) || 16;
+            return firstCard.offsetWidth + gap;
+        };
+
+        const updateButtons = () => {
+            const atStart = carouselTrack.scrollLeft <= 4;
+            const atEnd   = carouselTrack.scrollLeft >= carouselTrack.scrollWidth - carouselTrack.clientWidth - 4;
+            carouselPrev.disabled = atStart;
+            carouselNext.disabled = atEnd;
+        };
+
+        carouselPrev.addEventListener('click', () => {
+            carouselTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+
+        carouselNext.addEventListener('click', () => {
+            carouselTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+
+        carouselTrack.addEventListener('scroll', updateButtons, { passive: true });
+        window.addEventListener('resize', updateButtons);
+        updateButtons(); // initialise state
+
+        // Drag-to-scroll (mouse)
+        let isDragging = false;
+        let dragStartX = 0;
+        let scrollStartLeft = 0;
+
+        carouselTrack.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            dragStartX = e.pageX;
+            scrollStartLeft = carouselTrack.scrollLeft;
+            carouselTrack.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const dx = e.pageX - dragStartX;
+            carouselTrack.scrollLeft = scrollStartLeft - dx;
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            carouselTrack.style.cursor = 'grab';
+        });
+
+        // Prevent link navigation when dragging
+        carouselTrack.querySelectorAll('.carousel-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (Math.abs(carouselTrack.scrollLeft - scrollStartLeft) > 5) {
+                    e.preventDefault();
+                }
+            });
+        });
+    }
 });
+

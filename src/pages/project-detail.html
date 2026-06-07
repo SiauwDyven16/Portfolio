@@ -112,30 +112,29 @@
                 <p>SBXone</p>
             </div>
             
-            <!-- Mockup Images (populated by JS from project.mockup[]) -->
-            <div id="project-mockup" class="flex grid-cols-2 gap-2 w-full overflow-hidden md:grid md:grid-cols-4 md:gap-5">
+            <!-- MOCKUP -->
+            <div id="project-mockup" class="flex grid-cols-2 gap-2 w-full overflow-x-scroll md:grid md:grid-cols-4 md:gap-5">
                 <!-- Dynamically injected by project-detail.js -->
             </div>
         </section>
 
-        <!-- Project Overview -->
+        <!-- PROJECT DESCRIPTION -->
         <section class="flex grid-cols-3 flex-col gap-5 px-8 py-10 md:py-20 md:grid">
             <h3>Overview.</h3>
             <p id="project-overview" class="col-span-2 col-start-2"></p>
         </section>
 
-        <!-- Screen Gallery / Showcase (populated by JS from project.screen[]) -->
+        <!-- SCREENS -->
         <section class="px-8 py-10 md:py-20">
             <div class="border-border-default mb-8 flex justify-between border-b pb-2">
                 <p>Screens</p>
             </div>
-            <div id="project-screen" class="grid grid-cols-4 gap-5 w-full">
+            <div id="project-screen" class="w-full">
                 <!-- Dynamically injected by project-detail.js -->
-                <div class="bg-white w-full rounded-lg object-contain object-center border border-border-default h-120"></div>
             </div>
         </section>
 
-        <!-- Next / Previous Navigation -->
+        <!-- NEXT / PREV -->
         <section class="border-border-default flex justify-between border-t border-b px-8 py-10">
             <div id="nav-prev" class="flex flex-col">
                 <p class="text-sm">Previous</p>
