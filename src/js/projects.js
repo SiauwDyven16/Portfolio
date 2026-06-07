@@ -22,7 +22,7 @@ const projects = [
         id: 'radiocast',
         title: 'RadioCast',
         type: 'app',
-        coverImage: '../assets/images/Radiocast/Radiocast-Cover.webp',
+        coverImage: '../assets/images/Radiocast/Radiocast-Cover.jpg',
         coverBg: 'bg-white',
         role: 'UI/UX Designer',
         year: '2026',
@@ -91,7 +91,7 @@ const projects = [
             'Dengan menghadirkan fitur AI analytics, user tidak hanya dapat melihat grafik pengeluaran mereka, namun juga dapat berdiskusi dengan AI untuk mencari solusi agar pengeluaran mereka berkurang.',
         ],
         mockup: ['../assets/images/Xpandable/Mockup/Xpandable-Cover-1.webp', '../assets/images/Xpandable/Mockup/Xpandable-Cover-2.webp', '../assets/images/Xpandable/Mockup/Xpandable-Cover-3.webp', '../assets/images/Xpandable/Mockup/Xpandable-Cover-4.webp'],
-        screen: ['../assets/images/Xpandable/Screen/Xpandable-onboard.webp', '../assets/images/Xpandable/Screen/Xpandable-home.webp', '../assets/images/Xpandable/Screen/Xpandable-AIchat.webp', '../assets/images/Xpandable/Screen/Xpandable-AIreply.webp', '../assets/images/Xpandable/Screen/Xpandable-send.webp', '../assets/images/Xpandable/Screen/Xpandable-expenses.webp', '../assets/images/Xpandable/Screen/Xpandable-income.webp'],
+        screen: ['../assets/images/Xpandable/Screen/XPandable-onboard.webp', '../assets/images/Xpandable/Screen/XPandable-home.webp', '../assets/images/Xpandable/Screen/XPandable-AIchat.webp', '../assets/images/Xpandable/Screen/XPandable-AIreply.webp', '../assets/images/Xpandable/Screen/XPandable-send.webp', '../assets/images/Xpandable/Screen/XPandable-expenses.webp', '../assets/images/Xpandable/Screen/XPandable-income.webp'],
     },
     {
         id: 'thinker',
@@ -109,7 +109,7 @@ const projects = [
             'Desain berfokus pada pengalaman menulis yang tenang dan bebas gangguan, dengan fitur kategorisasi dan tagging yang intuitif.',
         ],
         mockup: ['../assets/images/Thinker/Mockup/Thinker-Cover-1.webp', '../assets/images/Thinker/Mockup/Thinker-Cover-2.webp', '../assets/images/Thinker/Mockup/Thinker-Cover-3.webp', '../assets/images/Thinker/Mockup/Thinker-Cover-4.webp'],
-        screen: ['../assets/images/Thinker/Screen/Thinker-desktop.webp'],
+        screen: ['../assets/images/Thinker/Screen/Thinker-Desktop.webp'],
     },
     {
         id: 'gjf',
