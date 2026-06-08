@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Sidebar Toggle Logic
+    // SIDEBAR
     const menuBtn = document.getElementById('menu-btn');
     const closeBtn = document.getElementById('close-sidebar-btn');
     const sidebar = document.getElementById('sidebar');
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
     if (overlay) overlay.addEventListener('click', closeSidebar);
 
-    // Close sidebar when a link is clicked
+    // CLOSE SIDEBAR LINK
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
     sidebarLinks.forEach(link => {
         link.addEventListener('click', closeSidebar);
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     createRandomStars();
 
-    // ---- Works Carousel ----
+    // ---- CAROUSELV ----
     const carouselTrack = document.getElementById('works-carousel-track');
     const carouselPrev  = document.getElementById('carousel-prev');
     const carouselNext  = document.getElementById('carousel-next');

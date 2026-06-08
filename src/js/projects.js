@@ -1,22 +1,3 @@
-/**
- * projects.js
- * ============
- * File ini adalah "database" dari semua project Anda.
- * Untuk menambah project baru, cukup tambahkan objek baru ke dalam array `projects` di bawah.
- *
- * PANDUAN FIELD:
- * - id          : (string) ID unik project, digunakan di URL. Gunakan huruf kecil dan tanda hubung. Contoh: 'radiocast-app'
- * - title       : (string) Nama project.
- * - coverImage  : (string) Path ke gambar cover project.
- * - coverBg     : (string) Warna background cover jika gambar belum ada. Contoh: 'bg-black', 'bg-white'
- * - role        : (string) Peran Anda di project ini.
- * - year        : (string) Tahun project.
- * - client      : (string) Nama klien atau perusahaan.
- * - liveUrl     : (string | null) URL ke live site. Isi 'null' jika tidak ada.
- * - overview    : (string[]) Array paragraph untuk bagian Overview.
- * - gallery     : (string[]) Array path gambar untuk galeri showcase. Bisa lebih dari 3.
- */
-
 const projects = [
     {
         id: 'radiocast',
